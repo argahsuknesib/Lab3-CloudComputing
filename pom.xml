@@ -6,8 +6,8 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
-      
-       <plugin>
+
+      <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <executions>
           <execution>
@@ -28,10 +28,8 @@
           </descriptorRefs>
         </configuration>
       </plugin>
-      
-      
-    
-    
+
+
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
@@ -39,38 +37,38 @@
           <release>11</release>
         </configuration>
       </plugin>
-      
+
     </plugins>
-    
+
   </build>
-  
+
   <properties>
-  <java.version>1.8</java.version>
-</properties>
-<dependencyManagement>
+    <java.version>1.8</java.version>
+  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>software.amazon.awssdk</groupId>
+        <artifactId>bom</artifactId>
+        <version>2.17.86</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>software.amazon.awssdk</groupId>
-      <artifactId>bom</artifactId>
-      <version>2.17.86</version>
-      <type>pom</type>
-      <scope>import</scope>
+      <artifactId>s3</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>software.amazon.awssdk</groupId>
+      <artifactId>ec2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>software.amazon.awssdk</groupId>
+      <artifactId>sqs</artifactId>
     </dependency>
   </dependencies>
-</dependencyManagement>
-<dependencies>
-  <dependency>
-    <groupId>software.amazon.awssdk</groupId>
-    <artifactId>s3</artifactId>
-  </dependency>
-  <dependency>
-    <groupId>software.amazon.awssdk</groupId>
-    <artifactId>ec2</artifactId>
-  </dependency>
-  <dependency>
-    <groupId>software.amazon.awssdk</groupId>
-    <artifactId>sqs</artifactId>
-  </dependency>
-</dependencies>
 
 </project>
