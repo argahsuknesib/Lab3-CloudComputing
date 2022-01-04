@@ -3,6 +3,7 @@
 ## Architecture : 
 
 ![](images/lab3-architecture.png)
+![](images/image.png)
 
 
 Two different files are written for the implementation using Java SDK for AWS,
