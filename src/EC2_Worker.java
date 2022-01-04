@@ -65,7 +65,7 @@ public class EC2_Worker{
 
       sqsClient.close();
 
-      String path = "C:\\Users\\adminlocal\\Desktop\\Lab3-CloudComputing\\downloaded.csv";
+      String path = "downloaded.csv";
     
       //initializing s3 client &  region
       Region region = Region.US_EAST_1;
@@ -175,7 +175,7 @@ public class EC2_Worker{
 
         //write to csv
         String objectKey2 = "result.csv";
-        String objectpath = "C:\\Users\\adminlocal\\Desktop\\Lab3-CloudComputing\\result.csv";
+        String objectpath = "result.csv";
         writeDataLineByLine(objectpath,total_number, total_sold,average_per_country,unique,average_per_product,unique2);
 
         //upload file to S3
@@ -183,7 +183,7 @@ public class EC2_Worker{
         String result = putS3Object(s3, bucketName, objectKey2, objectpath);
         System.out.println("Tag information: "+result);
 
-        //send message to put box que
+        //send message to put box queue
         String message =  bucketName + "," + objectKey2;
 
         //initializing sqs client & region

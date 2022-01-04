@@ -99,8 +99,7 @@ public class Client_App {
         sqsClient.close();
 
         //retrieve file
-        String path2 = "C:\\Users\\adminlocal\\Desktop\\Lab3-CloudComputing\\result2.csv";
-        //initializing s3 client &  region
+        String path2 = "result.csv";
         //initializing s3 client &  region
         S3Client s3_2 = S3Client.builder()
             .region(region)

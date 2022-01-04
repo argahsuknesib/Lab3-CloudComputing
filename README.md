@@ -1,4 +1,14 @@
-#Cloud Computing Lab 3
+# Cloud Computing Lab 3
+
+## Architecture : 
+
+![](images/lab3-architecture.png)
+
+
+Two different files are written for the implementation using Java SDK for AWS,
+
+1. Client App
+2. EC2 Worker App.
 
 ### Q1 : What types of queues can you create? State their differences.
 
